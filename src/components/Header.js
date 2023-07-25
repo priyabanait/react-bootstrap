@@ -2,6 +2,7 @@ import React from 'react'
 import './header.css'
 import productsArr from '../data'
 import { Container, Row,Col } from 'react-bootstrap'
+import Margin from './Margin'
 
 
 
@@ -10,6 +11,7 @@ export default function Header() {
     
   return (
     <section>
+    <Margin></Margin>
       <Container fluid >
         <div >
           <h2 className="text-center">MUSIC</h2>
@@ -17,14 +19,16 @@ export default function Header() {
         </div>
         <Row>{
             productsArr.map((item)=>(
-                <Col sm={5}  
-                key={item.id}>
-               
+              
+                <Col sm={5} key={item.id}>
+                
                    <div className='image'>
-                   <h4 className='album'>{item.album}</h4>
+                 
+                   <h4 className='album'>
+                   {item.album}</h4>
                    <img src={item.imageUrl} alt=''></img>
                    
-                   <p className='price'>${item.price}</p>
+                   <p className='price1'>${item.price}</p>
                    <div className='tag'>
                    <button style={{color:'white',background:'#87CEFA '}}>ADD TO CART</button>
                    </div>

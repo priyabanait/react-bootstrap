@@ -1,29 +1,28 @@
-import { Navbar,Container } from 'react-bootstrap';
+
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Margin from './components/Margin';
 
+import Cart from './components/Cart';
+import Nav from './components/Nav';
 function App() {
+  const[showCart,setShowCart]=useState(true);
+
+  function handleCart(value){
+    setShowCart(value);
+    
+	}
+  
   return (
-    <div>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#HOME">HOME</Navbar.Brand>
-          <Navbar.Brand href="#STORE">STORE</Navbar.Brand>
-          <Navbar.Brand href="#ABOUT">ABOUT</Navbar.Brand>
-          <div>
-                <span>
-                <a href='cart' className='cart'>
-                cart
-                </a>
-                </span> 
-                  <span className='span'>0</span> 
-               </div>
-          </Container>
-        </Navbar>
-      <Margin></Margin>
-      <Header></Header>
-    </div>
+    <React.Fragment>
+      <Nav handleCart={handleCart}></Nav>
+      
+     
+      {
+  showCart? <Header ></Header>:<Cart ></Cart>
+  
+}
+    </React.Fragment>
     
   );
 }

@@ -1,7 +1,7 @@
 const productsArr = [
 
     {
-    
+    id:1,
     title: 'Colors',
     album:'Album 1',
     
@@ -12,7 +12,7 @@ const productsArr = [
     },
     
     {
-    
+    id:2,
     title: 'Black and white Colors',
     album:'Album 2',
     price: 50,
@@ -22,7 +22,7 @@ const productsArr = [
     },
     
     {
-    
+    id:3,
     title: 'Yellow and Black Colors',
     album:'Album 3',
     price: 70,
@@ -32,7 +32,7 @@ const productsArr = [
     },
     
     {
-    
+    id:4,
     title: 'Blue Color',
     album:'Album 4',
     price: 100,

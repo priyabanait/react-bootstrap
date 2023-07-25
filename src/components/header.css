@@ -2,6 +2,7 @@
     margin-left: 300px;
     margin-top: 20px;
 }
+
 .tag{
     display:inline-flex;
   margin-left: 100px;
@@ -11,10 +12,19 @@ button{
 
     border-radius: 2px;
     border-color: aliceblue;
+    background-color: rgb(243, 89, 89);
+}
+.price1{
+    text-align: center;
+    margin-top: 10px;
 }
 .price{
     text-align: center;
     margin-top: 10px;
+    color: #8a2b06;
+    padding-left: 150px;
+    margin-top: 20px;
+    font-weight: 800;
 }
 .album{
     margin-left: 100px;
@@ -23,4 +33,109 @@ h2{
     font-family:Metal Mania;
     font-size: 30px;
    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.article{
+    padding-top: 60px;
+    width: 60%;
+    margin: auto;
+}
+.cart_box img{
+    width: 80px;
+    height: 80px;
+}
+.cart_img{
+    display: flex;
+    width: 400px;
+}
+.cart_img p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.cart_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom:  2px solid black;
+    border-top:  2px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.cart_box div:nth-child(2) button{
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.cart_box div:nth-child(3) button{
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border:none;
+    outline: none;
+    color: white;
+    background-color:  #918f8e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.cart_box div:nth-child(3) span{
+    background-color:white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.name{
+    display:inline-flex;
+}
+.item{
+    padding-left: 180px;
+}
+input{
+  
+    width: 40px;
+    height: 30px;
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 8%;
+    outline: none;
+    text-align: center;
+    margin-right: 20px;
+    
+}
+.text{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+.total span:nth-child(1){
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 700px;
+}
+.total span:nth-child(2){
+    font-size: 2rem;
+    color: rgb(6, 6, 6);
+    margin-right: 20px;
+    
+}
+.purchase{
+    font-size: larger;
+    margin-left: 350px;
+    margin-top: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color:rgb(0, 204, 255);
+    width: fit-content;
+    padding: 10px;
+    color:white;
 }
