@@ -1,0 +1,26 @@
+.image{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.tag{
+    display:inline-flex;
+  margin-left: 100px;
+  margin-bottom: 10px
+}
+button{
+
+    border-radius: 2px;
+    border-color: aliceblue;
+}
+.price{
+    text-align: center;
+    margin-top: 10px;
+}
+.album{
+    margin-left: 100px;
+}
+h2{
+    font-family:Metal Mania;
+    font-size: 30px;
+   
+}
