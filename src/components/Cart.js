@@ -1,47 +1,9 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './header.css'
+import ProductContext from './context/productContext';
 export default function Cart() {
-  
-    const cartElements = [
-
-        {
-        
-        title: 'Colors',
-        
-        price: 100,
-        
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-        
-        quantity: 2,
-        album:'Album 1'
-        
-        },
-        
-        {
-        
-        title: 'Black and white Colors',
-        
-        price: 50,
-        
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-        
-        quantity: 3,
-        album:'Album 2'
-        },
-        
-        {
-        
-        title: 'Yellow and Black Colors',
-        
-        price: 70,
-        
-        imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-        album:'Album 3' ,
-        quantity: 1,
-        
-        }
-        
-        ]
+    const {  cartItems, removeItem } = useContext(ProductContext);
+    
   return (
     <section>
       <div className='article'>
@@ -52,7 +14,7 @@ export default function Cart() {
       </div>
         {
             
-            cartElements?.map((item)=>(
+            cartItems?.map((item)=>(
                 <div className="cart_box" >
                     <div className="cart_img">
                    
@@ -68,13 +30,16 @@ export default function Cart() {
                     <div>
                       
 
-                        <button>REMOVE</button>
+                        <button onClick={() => removeItem(item.id)}>REMOVE</button>
                     </div>
                 </div>
             ))}
         <div className='total'>
             <span>Total:</span>
-            <span>Rs 0</span>
+            <span>{
+                cartItems.reduce((amount, item) => item.price + amount, 0)
+               
+              }</span>
         </div>
         <div>
         <button className='purchase'>PURCHASE</button>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-
+import AppProvider from './components/context/AppProvider';
 import Cart from './components/Cart';
 import Nav from './components/Nav';
 function App() {
@@ -14,7 +14,7 @@ function App() {
 	}
   
   return (
-    <React.Fragment>
+    <AppProvider>
       <Nav handleCart={handleCart}></Nav>
       
      
@@ -22,7 +22,7 @@ function App() {
   showCart? <Header ></Header>:<Cart ></Cart>
   
 }
-    </React.Fragment>
+    </AppProvider>
     
   );
 }
