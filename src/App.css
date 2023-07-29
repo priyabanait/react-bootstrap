@@ -44,11 +44,12 @@
 }
 .cart{
   border: 2px solid;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 2px 10px;
     text-decoration: none;
     cursor: pointer;
-    
+    margin-left: 1200px;
+    color: aliceblue;
 }
 .span{
   color: aliceblue;

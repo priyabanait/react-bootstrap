@@ -1,29 +1,53 @@
 import ProductContext from "./productContext";
-import { ADD_TO_CART, REMOVE_ITEM } from './Types'
-import CartReducer from "./CartReducer";
+
+
 import { useReducer } from "react";
 
 const AppProvider =({children})=>{
   const initalState = {
-    showCart: false,
+   
     cartItems: [],
   };
+
+  const CartReducer = (state, action) => {
+    if(action.type==="ADD_TO_CART") 
+     return {
+      
+       ...state,
+       cartItems: [...state.cartItems, action.payload]
+        
+         };
+         
+       
+      if(action.type==="REMOVE_ITEM") 
+         return {
+           ...state,
+           cartItems: state.cartItems.filter(
+             (item) => item.id !== action.payload
+           ),
+         };
+      
+     return state;
+    }
 
   const [state, dispatch] = useReducer(CartReducer, initalState);
 
   const addToCart = (item) => {
-    dispatch({ type: ADD_TO_CART, payload: item });
+    dispatch({ type: 'ADD_TO_CART', payload: item });
+   
   };
 
   const removeItem = (id) => {
-    dispatch({ type: REMOVE_ITEM, payload: id });
+    dispatch({ type: "REMOVE_ITEM", payload: id });
   };
+  
+  console.log(state.cartItems);
     return(
       <ProductContext.Provider  value={{
-        showCart: state.showCart,
         cartItems: state.cartItems,
         addToCart,
         removeItem,
+        
       }}>
       {children}
     </ProductContext.Provider>

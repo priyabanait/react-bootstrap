@@ -26,7 +26,7 @@ export default function Cart() {
                         <input type='text' value={1}></input>
                         </span>
                     </div>
-                   
+                    
                     <div>
                       
 
