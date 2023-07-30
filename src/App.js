@@ -7,6 +7,7 @@ import AppProvider from './components/context/AppProvider';
 import Cart from './components/Cart';
 import Home from './components/Home';
 
+
 import {BrowserRouter,NavLink,Route,Routes} from "react-router-dom";
 
 function App() {
@@ -18,14 +19,16 @@ function App() {
     <AppProvider>
 
     <>
+   
             <BrowserRouter>
+          
                 <div style={{
                     display: "flex",
                     background: 'black',
                     padding: '5px 0 5px 5px',
                     fontSize: '20px',
-                    
-                    
+                    paddingLeft:'600px'
+                  
                 }}>
                     <div style={{ margin: '10px' }}>
                         <NavLink to="/home" style={({ isActive }) => ({ 
@@ -57,14 +60,17 @@ function App() {
             </div>
            
                 </div>
+           
                 <Routes>
                     <Route exact path="/home" element={<Home />} />
                     <Route exact path="/store" element={<Header />} />
                     <Route exact path="/about" element={<About />} />
                     <Route exact path="/cart" element={<Cart />} />
                 </Routes>
+              
             </BrowserRouter>
         </>
+       
     </AppProvider>
     
   );

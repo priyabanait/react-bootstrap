@@ -1,6 +1,7 @@
 .image{
     margin-left: 300px;
     margin-top: 20px;
+   
 }
 
 .tag{
@@ -138,4 +139,16 @@ input{
     width: fit-content;
     padding: 10px;
     color:white;
+}
+header{
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 30px;
+    background: #777;
+    color: white;
+}
+#id{
+    padding: 40px;
+    font-size: 100px;
 }

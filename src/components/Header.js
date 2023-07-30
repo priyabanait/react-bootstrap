@@ -34,13 +34,9 @@ export default function Header() {
                    </div>
                   
                    </div>
-                        
-                  
-                    
-                    
-                </Col>
+                 </Col>
 
-)) 
+              )) 
         }
         
         </Row>
