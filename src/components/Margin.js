@@ -1,5 +1,5 @@
 
-import './header.css'
+import './Store.css'
 
 
 export default function Margin() {

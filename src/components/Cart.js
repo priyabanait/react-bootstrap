@@ -1,13 +1,18 @@
 import React,{useContext} from 'react'
-import './header.css'
+import './Store.css'
+
 import ProductContext from './context/productContext';
 export default function Cart() {
     const {  cartItems, removeItem } = useContext(ProductContext);
     
+    function purchaseHandler(){
+       alert('Thank you for the purchase.');
+    }
   return (
     <section>
-      <div className='article'>
+      <div className='article' id='carts'>
       <div className='name'>
+      
 <h1>ITEM</h1>
 <h1 className='item'>PRICE</h1>
 <h1 className='item'>QUANTITY</h1>
@@ -23,7 +28,7 @@ export default function Cart() {
                         
                         <span className='price'> {item.price}</span>
                         <span className='text'>
-                        <input type='text' value={1}></input>
+                        <input type='text' value='1'></input>
                         </span>
                     </div>
                     
@@ -42,7 +47,7 @@ export default function Cart() {
               }</span>
         </div>
         <div>
-        <button className='purchase'>PURCHASE</button>
+        <button className='purchase' onClick={purchaseHandler}>PURCHASE</button>
     </div>
     </div>
     

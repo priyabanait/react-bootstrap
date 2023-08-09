@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import './header.css'
+import './Store.css'
 import productsArr from '../data'
 import { Container, Row,Col } from 'react-bootstrap'
 import Margin from './Margin'
@@ -41,6 +41,23 @@ export default function Header() {
         
         </Row>
     </Container>
+    <footer>
+<div id='footer-title'> The Generics</div>
+<div id='footer-icon'>
+<ul>
+  <li><a href="https://www.youtube.com">
+    <img src="https://prasadyash2411.github.io/ecom-website/img/6260efc8fc9a9002669d2f4ad9956cc0.jpg" alt=''></img>
+  </a></li>
+  <li><a href="https://spotify.com">
+    <img src='https://prasadyash2411.github.io/ecom-website/img/Spotify%20Logo.png' alt=''></img>
+  </a></li>
+  <li><a href="https://facebook.com">
+    <img src='https://prasadyash2411.github.io/ecom-website/img/Facebook%20Logo.png' alt=''></img>
+  </a></li>
+</ul>
+</div>
+ </footer>
+
    </section>
   )
 }
