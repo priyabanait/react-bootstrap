@@ -20,6 +20,9 @@ const AppProvider =({children})=>{
         setToken(null);
         localStorage.removeItem('token')
     }
+    setTimeout(() => {
+      return logoutHandler();
+    }, 300000);
     
   const initalState = {
    
