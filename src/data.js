@@ -4,7 +4,7 @@ const productsArr = [
     id:1,
     title: 'Colors',
     album:'Album 1',
-    
+    amount:1,
     price: 100,
     
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
@@ -16,7 +16,7 @@ const productsArr = [
     title: 'Black and white Colors',
     album:'Album 2',
     price: 50,
-    
+    amount:1,
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
     
     },
@@ -26,7 +26,7 @@ const productsArr = [
     title: 'Yellow and Black Colors',
     album:'Album 3',
     price: 70,
-    
+    amount:1,
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
     
     },
@@ -36,7 +36,7 @@ const productsArr = [
     title: 'Blue Color',
     album:'Album 4',
     price: 100,
-    
+    amount:1,
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
     
     }

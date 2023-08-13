@@ -9,6 +9,10 @@ import ProductContext from './context/productContext'
 
 export default function Header() {
   const { addToCart } = useContext(ProductContext);
+
+  function addCart(item){
+    addToCart(item)
+  }
   return (
     <section>
     <Margin></Margin>
@@ -30,7 +34,7 @@ export default function Header() {
                    
                    <p className='price1'>${item.price}</p>
                    <div className='tag'>
-                   <button style={{color:'white',background:'#87CEFA '}} onClick={() => addToCart(item)}>ADD TO CART</button>
+                   <button style={{color:'white',background:'#87CEFA '}} onClick={() => addCart(item)}>ADD TO CART</button>
                    </div>
                   
                    </div>

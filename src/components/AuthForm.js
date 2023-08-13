@@ -19,6 +19,7 @@ event.preventDefault();
 
 const enterdEmail=emailRef.current.value;
 const enterdPassword=passwordRef.current.value;
+localStorage.setItem('email',enterdEmail);
 let url;
 if(login){
  url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAQYXLrWSQR8lxbt1sc-ye5bGOTDsYKzQM'
@@ -42,7 +43,7 @@ fetch(url,{
 return res.json();
     }else{
       return res.json().then((data)=>{
-        
+       
         let errorMessage='Authentication failed!';
         
         
@@ -52,7 +53,9 @@ return res.json();
   })
   .then((data)=>{
     context.login(data.idToken);
+    
     navigate('/');
+   
   })
   .catch((err)=>{
     alert(err.message);
