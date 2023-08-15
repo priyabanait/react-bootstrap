@@ -34,8 +34,6 @@ export default function Cart() {
      return event.target.value;
     }
       
-      
-      
     
   return (
     <section>
@@ -48,9 +46,9 @@ export default function Cart() {
       </div>
         {
             
-          cartItems?.map((item)=>(
+          cartItems?.map((item,i)=>(
               
-                <div className="cart_box" key={item.id}>
+                <div className="cart_box" key={i}>
                     <div className="cart_img">
                   
                         <img src={item.imageUrl} alt='' />
@@ -63,9 +61,7 @@ export default function Cart() {
                     </div>
                     
                     <div>
-                      
-
-                        <button onClick={() => handleRemoveItem(item.id)}>REMOVE</button>
+                       <button onClick={() => handleRemoveItem(item.id)}>REMOVE</button>
                     </div>
                 </div>
             ))}
@@ -77,7 +73,6 @@ export default function Cart() {
         <button className='purchase' onClick={purchaseHandler}>PURCHASE</button>
     </div>
     </div>
-    
     </section>
   )
 }

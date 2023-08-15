@@ -3,7 +3,7 @@ import ProductContext from './context/productContext';
 import CartIcon from './CartIcon'
 import classes from './CartButton.module.css';
 export default function CartButton() {
-    const context=useContext(ProductContext);
+    const{cartItems}=useContext(ProductContext);
   return (
     <div>
       <button className={classes.button} >
@@ -11,7 +11,7 @@ export default function CartButton() {
         <CartIcon />
       </span>
       
-      <span >{context.cartItems.length}</span>
+      <span >{cartItems.length}</span>
     </button>
     </div>
   )
